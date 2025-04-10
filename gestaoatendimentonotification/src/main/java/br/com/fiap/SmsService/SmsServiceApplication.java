@@ -1,13 +1,13 @@
-package br.com.fiap.gestaoatendimentonotification;
+package br.com.fiap.SmsService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GestaoatendimentonotificationApplication {
+public class SmsServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GestaoatendimentonotificationApplication.class, args);
+		SpringApplication.run(SmsServiceApplication.class, args);
 	}
 
 }

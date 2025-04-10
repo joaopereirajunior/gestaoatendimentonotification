@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
-	<artifactId>gestaoatendimentonotification</artifactId>
+	<artifactId>SmsService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gestaoatendimentonotification</name>
-	<description>Este projeto é referente a </description>
+	<name>SmsService</name>
+	<description>Serviço de Envio de SMS</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,16 +30,17 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	<!--
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency
+	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -50,6 +51,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		    <groupId>com.twilio.sdk</groupId>
+		    <artifactId>twilio</artifactId>
+		    <version>10.7.1</version>
+		</dependency>
+	<!--
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	-->
 	</dependencies>
 
 	<build>
