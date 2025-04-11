@@ -22,9 +22,6 @@ import br.com.fiap.SmsService.model.Mensagem;
 import br.com.fiap.SmsService.service.impl.SmsServiceImpl;
 
 public class SmsServiceTest {
-	
-//    @Mock
-//    private ClienteRepository clienteRepository;
     
     private SmsServiceImpl smsServiceImpl;
 
