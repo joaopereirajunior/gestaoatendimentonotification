@@ -53,13 +53,18 @@ public class SmsServiceImpl implements SmsService {
 
 	public void enviarSms(String toNumber, String textoMensagem) {
 		
-		Twilio.init(twilioSid, twilioKey);
+		try {
+			Twilio.init(twilioSid, twilioKey);
 
-		PhoneNumber to = new PhoneNumber(toNumber);
-		PhoneNumber from = new PhoneNumber(twilioPhoneFrom);
+			PhoneNumber to = new PhoneNumber(toNumber);
+			PhoneNumber from = new PhoneNumber(twilioPhoneFrom);
 
-		Message message = Message.creator(to, from, textoMensagem).create();
+			Message message = Message.creator(to, from, textoMensagem).create();
 
-		System.out.println(message.getSid());
+			System.out.println(message.getSid());
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 }
