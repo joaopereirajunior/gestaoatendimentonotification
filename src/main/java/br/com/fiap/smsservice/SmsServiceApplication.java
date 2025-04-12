@@ -1,4 +1,4 @@
-package br.com.fiap.SmsService;
+package br.com.fiap.smsservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

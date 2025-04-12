@@ -1,4 +1,4 @@
-package br.com.fiap.SmsService.model;
+package br.com.fiap.smsservice.model;
 
 public class Mensagem {
 

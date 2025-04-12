@@ -1,4 +1,4 @@
-package br.com.fiap.SmsService.model.dto;
+package br.com.fiap.smsservice.model.dto;
 
 public record SmsRequestDTO (
 		String nome,

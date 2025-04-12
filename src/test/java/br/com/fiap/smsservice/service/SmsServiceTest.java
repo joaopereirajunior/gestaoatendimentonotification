@@ -1,4 +1,4 @@
-package br.com.fiap.gestaoatendimentonotification.service;
+package br.com.fiap.smsservice.service;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
@@ -18,10 +18,10 @@ import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.rest.api.v2010.account.MessageCreator;
 import com.twilio.type.PhoneNumber;
 
-import br.com.fiap.SmsService.model.Mensagem;
-import br.com.fiap.SmsService.service.impl.SmsServiceImpl;
+import br.com.fiap.smsservice.model.Mensagem;
+import br.com.fiap.smsservice.service.impl.SmsServiceImpl;
 
-public class SmsServiceTest {
+class SmsServiceTest {
     
     private SmsServiceImpl smsServiceImpl;
 

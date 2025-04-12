@@ -1,7 +1,9 @@
-package br.com.fiap.SmsService.service.impl;
+package br.com.fiap.smsservice.service.impl;
 
 import java.text.MessageFormat;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -9,9 +11,11 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
-import br.com.fiap.SmsService.model.Mensagem;
-import br.com.fiap.SmsService.service.SmsService;
+import br.com.fiap.smsservice.model.Mensagem;
+import br.com.fiap.smsservice.service.SmsService;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class SmsServiceImpl implements SmsService {
 	
@@ -23,6 +27,8 @@ public class SmsServiceImpl implements SmsService {
 
 	@Value("${twilio.phone.from}")
 	private String twilioPhoneFrom;
+	
+	private static final Logger logger = LoggerFactory.getLogger(SmsServiceImpl.class);
 	
 	@Override
 	public void notificarEntrada(Mensagem mensagem) {
@@ -61,10 +67,10 @@ public class SmsServiceImpl implements SmsService {
 
 			Message message = Message.creator(to, from, textoMensagem).create();
 
-			System.out.println(message.getSid());
+			logger.info("SMS enviado com sucesso. SID: {}", message.getSid());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+			logger.error("Erro ao enviar SMS para o número {}: {}", toNumber, e.getMessage(), e);
+	        throw new RuntimeException("Erro ao enviar SMS", e);
 		}
 	}
 }

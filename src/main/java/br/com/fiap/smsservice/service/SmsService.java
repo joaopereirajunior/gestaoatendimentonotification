@@ -1,8 +1,8 @@
-package br.com.fiap.SmsService.service;
+package br.com.fiap.smsservice.service;
 
 import org.springframework.stereotype.Service;
 
-import br.com.fiap.SmsService.model.Mensagem;
+import br.com.fiap.smsservice.model.Mensagem;
 
 @Service
 public interface SmsService {

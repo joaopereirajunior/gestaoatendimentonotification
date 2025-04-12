@@ -1,9 +1,9 @@
-package br.com.fiap.SmsService.mapper;
+package br.com.fiap.smsservice.mapper;
 
 import org.springframework.stereotype.Component;
 
-import br.com.fiap.SmsService.model.Mensagem;
-import br.com.fiap.SmsService.model.dto.SmsRequestDTO;
+import br.com.fiap.smsservice.model.Mensagem;
+import br.com.fiap.smsservice.model.dto.SmsRequestDTO;
 
 @Component
 public class MensagemMapper {
